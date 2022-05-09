@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+ 
 
 export default function Home() {
   return (
@@ -9,7 +9,10 @@ export default function Home() {
       
       </Head>
 
-      <h1>Let's build Facbook</h1>
+
+      {/* {sidebar} */}
+      {/* feed */}
+      {/* widgets */}
     </div>
   )
 }
