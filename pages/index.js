@@ -23,3 +23,7 @@ export default function Home() {
     </div>
   )
 }
+
+// export async getServerSideProps(context){
+//   const session = await getSession
+// }
