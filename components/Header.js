@@ -18,7 +18,7 @@ import HeaderIcon from "./HeaderIcon";
 
 function Header(){
     return(
-        <div> 
+        <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md"> 
  {/* left */}
  <div className="flex items-center">
      <Image src="https://links.papareact.com/5me" width={40} height={40} layout="fixed"/>
@@ -31,7 +31,7 @@ function Header(){
  {/* center */}
  <div className="flex justify-center flex-grow">
      <div className="flex space-x-6 md:space-x-2">
-         <HeaderIcon Icon={HomeIcon}/>
+         <HeaderIcon active Icon={HomeIcon}/>
          <HeaderIcon Icon={FlagIcon}/>
          <HeaderIcon Icon={PlayIcon}/>
          <HeaderIcon Icon={ShoppingCartIcon}/>
