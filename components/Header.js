@@ -20,7 +20,7 @@ import {useSession ,signOut} from "next-auth/react";
 
 
 function Header(){
-    const { data: session, status } = useSession()
+    const { data: session, status } = useSession();
     return(
         <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md"> 
  {/* left */}
@@ -56,7 +56,7 @@ layout="fixed"
 />
 
 
-<p className="whitespace-nowrap font-semi-bold pr-3">Peter Pan</p>
+<p className="whitespace-nowrap font-semi-bold pr-3">{session.user.name}</p>
 <ViewGridIcon className="icon"/>
 <ChatIcon className="icon"/>
 <BellIcon className="icon"/>
