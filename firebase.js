@@ -1,6 +1,7 @@
-import firebase from 'firebase';
-import 'firebase/storage'
 
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD1QLI5FmrawuL1nCakBro27RsyptWlins",
@@ -12,6 +13,8 @@ const firebaseConfig = {
 };
 
 
-const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) :firebase.app();
+export const app = initializeApp(firebaseConfig);
 
-const db
+export const db = getFirestore(app);
+
+export const storage = getStorage(app);
