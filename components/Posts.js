@@ -7,14 +7,13 @@ import {
   doc,
   updateDoc,
 } from "@firebase/firestore";
-import  db  from "../firebase";
+import  {db}  from "../firebase";
 import Post from "./Post";
 
 export default function Posts({ postsList }) {
   const postCollections = collection(db, "posts");
   const [posts] = useCollection(postCollections);
 
-  console.log("postList from server", postsList);
 
   return (
     <div>
