@@ -17,8 +17,7 @@ export default function Posts({ postsList }) {
 
   return (
     <div>
-      {posts
-        ? posts.docs?.map((post) => {
+      { posts?.docs.map((post) => {
             return (
               <Post
                 key={post.id}
@@ -30,18 +29,8 @@ export default function Posts({ postsList }) {
                 postImage={post.data().postImage}
               />
             );
-          })
-        : postsList.map((post) => {
-            <Post
-              key={post.id}
-              name={post.name}
-              message={post.message}
-              email={post.email}
-              timeStamp={post.timeStamp}
-              image={post.image}
-              postImage={post.postImage}
-            />;
           })}
+        
     </div>
   );
 }
