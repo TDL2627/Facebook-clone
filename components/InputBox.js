@@ -37,7 +37,7 @@ const sendPost = async (e) => {
           const currentPost = doc(db, "posts", currDoc.id);
           const imageRef = ref(
             storage,
-            `images/uploads/${imageToPost.name + v4()}`
+            `posts/${imageToPost.name + v4()}`
           );
           uploadBytes(imageRef, imageToPost).then((snapshot) => {
             getDownloadURL(snapshot.ref).then((url) => {
@@ -57,7 +57,7 @@ const sendPost = async (e) => {
     e.preventDefault();
     console.log("uplaoding file");
     if (imageToPost == null) return;
-    const imageRef = ref(storage, `images/uploads/${imageToPost.name + v4()}`);
+    const imageRef = ref(storage, `posts/${imageToPost.name + v4()}`);
     uploadBytes(imageRef, imageToPost).then((snapshot) => {
       getDownloadURL(snapshot.ref).then((url) => {
     
