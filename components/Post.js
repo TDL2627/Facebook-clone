@@ -1,21 +1,27 @@
 import React from "react";
 import Image from "next/image";
 import { ChatAltIcon, ShareIcon, ThumbUpIcon } from "@heroicons/react/outline";
+import {useSession } from "next-auth/react";
 
 export default function Post({
+  
   name,
   message,
   email,
   timeStamp,
   image,
   postImage,
-}) {
+})
+
+{
+  const { data: session, status } = useSession();
+
   return (
     <div className="flex flex-col">
       <div className="p-5 bg-white mt-5 rounded-t-2xl shadow-md">
         <div className="flex items-center space-x-2">
           <Image
-            src={image}
+            src={session.user.image}
             className="rounded-full"
             width={40}
             height={40}
