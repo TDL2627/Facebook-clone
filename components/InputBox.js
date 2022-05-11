@@ -50,7 +50,7 @@ const sendPost = async (e) => {
 
     alert("Post created")
     removeImage();
-    inputRef.current.value="";
+  
   };
 
   const uploadFile = (e) => {
